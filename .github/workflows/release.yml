@@ -18,7 +18,11 @@ jobs:
           fetch-depth: 0
 
       - name: Scan repository for secrets
-        uses: gitleaks/gitleaks-action@v2
+        run: |
+          docker run --rm --user "$(id -u):$(id -g)" \
+            -v "$PWD:/repo" \
+            ghcr.io/gitleaks/gitleaks:v8.24.3 \
+            git --redact --no-banner --log-opts="--all" /repo
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
