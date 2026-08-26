@@ -5,15 +5,21 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
 
-    <!-- M 字母主体 -->
+    <!-- 一笔式圆角 M：统一笔画粗细，在小尺寸下保持清晰。 -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M34,30h6l14,20l14,-20h6v48h-7V42l-13,18l-13,-18v36h-7z"/>
-
-    <!-- 底部笔记线条 -->
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FF241B78"
+        android:strokeAlpha="0.22"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M35,78V36C35,32.7 37.2,31 39.5,31C41.4,31 42.8,32 44,33.8L56,55L68,33.8C69.2,32 70.6,31 72.5,31C74.8,31 77,32.7 77,36V78" />
     <path
-        android:fillColor="#FFFFFF"
-        android:fillAlpha="0.5"
-        android:pathData="M34,86h40v3H34z"/>
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FFF9FBFF"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M33,75V33C33,29.7 35.2,28 37.5,28C39.4,28 40.8,29 42,30.8L54,52L66,30.8C67.2,29 68.6,28 70.5,28C72.8,28 75,29.7 75,33V75" />
 
 </vector>

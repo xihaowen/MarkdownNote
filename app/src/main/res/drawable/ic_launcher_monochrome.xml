@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Android 13+ themed icon：复用一笔式 M，由系统统一着色。 -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FF000000"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M33,75V33C33,29.7 35.2,28 37.5,28C39.4,28 40.8,29 42,30.8L54,52L66,30.8C67.2,29 68.6,28 70.5,28C72.8,28 75,29.7 75,33V75" />
+</vector>

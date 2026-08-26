@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#1B3A4B"/>
-</shape>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 系统会按设备形状裁切外框；背景保持满幅，适配各种 adaptive icon mask。 -->
+    <path android:pathData="M0,0H108V108H0Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="8"
+                android:startY="4"
+                android:endX="101"
+                android:endY="106"
+                android:type="linear">
+                <item android:offset="0" android:color="#FF83BEFF" />
+                <item android:offset="0.50" android:color="#FF657CF4" />
+                <item android:offset="1" android:color="#FF5145CE" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 大面积柔光与底部色彩景深，避免复杂纹理。 -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillAlpha="0.18"
+        android:pathData="M0,0H108V25C88,40 45,46 0,31Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:fillAlpha="0.08"
+        android:pathData="M-20,-13A57,57 0,1 0,94,-13A57,57 0,1 0,-20,-13Z" />
+    <path
+        android:fillColor="#FF251B80"
+        android:fillAlpha="0.11"
+        android:pathData="M45,103A45,45 0,1 0,135,103A45,45 0,1 0,45,103Z" />
+</vector>
