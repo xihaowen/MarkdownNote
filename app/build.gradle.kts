@@ -59,12 +59,6 @@ android {
         }
     }
     signingConfigs {
-        getByName("debug") {
-            storeFile = file("${System.getProperty("user.home")}/.android/debug.keystore")
-            storePassword = "android"
-            keyAlias = "androiddebugkey"
-            keyPassword = "android"
-        }
         create("release") {
             storeFile = file(releaseStoreFile ?: "missing-release-keystore")
             storePassword = releaseStorePassword.orEmpty()
