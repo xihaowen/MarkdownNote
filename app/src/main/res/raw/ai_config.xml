@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  AI 助手预置配置（provider → plan → model）
+  数据于 2026-07-31 经各服务商官方文档核实。
+  - 有「编程套餐专用端点」的服务商（如智谱）写多个 plan；其余单 plan。
+  - 修改本文件即可增删服务商/套餐/模型，无需改 Kotlin。
+-->
+<aiConfig>
+    <!-- 默认配置 -->
+    <defaults
+        providerId="deepseek"
+        planId="standard"
+        modelId="deepseek-chat"
+        temperatureStyle="BALANCED"
+        aiEnabled="false"
+        memoryEnabled="true"
+        dreamEnabled="true" />
+
+    <providers>
+        <!-- DeepSeek（深度求索）-->
+        <provider id="deepseek" name="DeepSeek（深度求索）">
+            <plan id="standard" name="普通 API" type="OPENAI_COMPATIBLE"
+                  baseUrl="https://api.deepseek.com"
+                  apiKeyApplyUrl="https://platform.deepseek.com">
+                <model id="deepseek-chat" name="DeepSeek-V3 对话" maxOutputTokens="8192" />
+                <model id="deepseek-reasoner" name="DeepSeek-R1 推理" maxOutputTokens="32768" />
+            </plan>
+        </provider>
+
+        <!-- 智谱 AI（GLM）—— 普通 API + Coding Plan 编程套餐 -->
+        <provider id="zhipu" name="智谱 AI（GLM）">
+            <plan id="standard" name="普通 API" type="OPENAI_COMPATIBLE"
+                  baseUrl="https://open.bigmodel.cn/api/paas/v4"
+                  apiKeyApplyUrl="https://open.bigmodel.cn">
+                <model id="glm-4.6" name="GLM-4.6 旗舰" maxOutputTokens="131072" />
+                <model id="glm-4-flash" name="GLM-4-Flash（免费）" maxOutputTokens="4096" />
+            </plan>
+            <!-- Coding Plan 专用端点，与通用端点不可互替 -->
+            <plan id="coding" name="GLM Coding Plan（编程套餐）" type="OPENAI_COMPATIBLE"
+                  baseUrl="https://open.bigmodel.cn/api/coding/paas/v4"
+                  apiKeyApplyUrl="https://docs.bigmodel.cn/cn/coding-plan/quick-start">
+                <model id="glm-4.6" name="GLM-4.6 旗舰" maxOutputTokens="131072" />
+            </plan>
+        </provider>
+
+        <!-- Kimi（月之暗面）-->
+        <provider id="moonshot" name="Kimi（月之暗面）">
+            <plan id="standard" name="普通 API" type="OPENAI_COMPATIBLE"
+                  baseUrl="https://api.moonshot.cn/v1"
+                  apiKeyApplyUrl="https://platform.moonshot.cn">
+                <model id="kimi-k3" name="Kimi K3 旗舰" maxOutputTokens="131072" />
+                <model id="moonshot-v1-8k" name="Moonshot 8K" maxOutputTokens="8192" />
+            </plan>
+        </provider>
+
+        <!-- 通义千问（阿里）-->
+        <provider id="qwen" name="通义千问（阿里）">
+            <plan id="standard" name="普通 API" type="OPENAI_COMPATIBLE"
+                  baseUrl="https://dashscope.aliyuncs.com/compatible-mode/v1"
+                  apiKeyApplyUrl="https://bailian.console.aliyun.com">
+                <model id="qwen-max" name="通义千问 Max" maxOutputTokens="8192" />
+                <model id="qwen-turbo" name="通义千问 Turbo" maxOutputTokens="8192" />
+            </plan>
+        </provider>
+
+        <!-- 文心一言（百度）-->
+        <provider id="wenxin" name="文心一言（百度）">
+            <plan id="standard" name="普通 API" type="OPENAI_COMPATIBLE"
+                  baseUrl="https://qianfan.baidubce.com/v2"
+                  apiKeyApplyUrl="https://cloud.baidu.com/product/wenxinworkshop">
+                <model id="ernie-4.0-8k" name="ERNIE 4.0 8K" maxOutputTokens="2048" />
+                <model id="ernie-speed-128k" name="ERNIE Speed 128K" maxOutputTokens="4096" />
+            </plan>
+        </provider>
+
+        <!-- 豆包（字节跳动）-->
+        <provider id="doubao" name="豆包（字节跳动）">
+            <plan id="standard" name="普通 API" type="OPENAI_COMPATIBLE"
+                  baseUrl="https://ark.cn-beijing.volces.com/api/v3"
+                  apiKeyApplyUrl="https://www.volcengine.com/product/ark">
+                <model id="doubao-seed-1-6" name="豆包 Seed 1.6" maxOutputTokens="8192" />
+                <model id="doubao-seed-2-1" name="豆包 Seed 2.1" maxOutputTokens="8192" />
+            </plan>
+        </provider>
+
+        <!-- OpenAI 官方 -->
+        <provider id="openai" name="OpenAI 官方">
+            <plan id="standard" name="普通 API" type="OPENAI_COMPATIBLE"
+                  baseUrl="https://api.openai.com/v1"
+                  apiKeyApplyUrl="https://platform.openai.com">
+                <model id="gpt-5" name="GPT-5" maxOutputTokens="131072" />
+                <model id="gpt-4.1" name="GPT-4.1" maxOutputTokens="32768" />
+            </plan>
+        </provider>
+
+        <!-- Anthropic（Claude）-->
+        <provider id="anthropic" name="Anthropic（Claude）">
+            <plan id="standard" name="普通 API" type="ANTHROPIC"
+                  baseUrl="https://api.anthropic.com/v1"
+                  apiKeyApplyUrl="https://console.anthropic.com">
+                <model id="claude-sonnet-4-5" name="Claude Sonnet 4.5" maxOutputTokens="65536" />
+                <model id="claude-haiku-4-5" name="Claude Haiku 4.5" maxOutputTokens="32768" />
+            </plan>
+        </provider>
+
+        <!-- Google Gemini -->
+        <provider id="gemini" name="Google Gemini">
+            <plan id="standard" name="普通 API" type="GEMINI"
+                  baseUrl="https://generativelanguage.googleapis.com/v1beta"
+                  apiKeyApplyUrl="https://aistudio.google.com">
+                <model id="gemini-2.5-pro" name="Gemini 2.5 Pro" maxOutputTokens="8192" />
+                <model id="gemini-2.5-flash" name="Gemini 2.5 Flash" maxOutputTokens="8192" />
+            </plan>
+        </provider>
+
+        <!-- Groq -->
+        <provider id="groq" name="Groq">
+            <plan id="standard" name="普通 API" type="OPENAI_COMPATIBLE"
+                  baseUrl="https://api.groq.com/openai/v1"
+                  apiKeyApplyUrl="https://console.groq.com">
+                <model id="llama-3.3-70b-versatile" name="Llama 3.3 70B" maxOutputTokens="32768" />
+            </plan>
+        </provider>
+
+        <!-- Together AI -->
+        <provider id="together" name="Together AI">
+            <plan id="standard" name="普通 API" type="OPENAI_COMPATIBLE"
+                  baseUrl="https://api.together.xyz/v1"
+                  apiKeyApplyUrl="https://docs.together.ai">
+                <model id="meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo" name="Llama 3.1 8B" maxOutputTokens="8192" />
+            </plan>
+        </provider>
+
+        <!-- 自定义：高级用户手填 -->
+        <provider id="custom" name="自定义">
+            <plan id="standard" name="普通 API" type="OPENAI_COMPATIBLE"
+                  baseUrl="" apiKeyApplyUrl="" />
+        </provider>
+    </providers>
+</aiConfig>

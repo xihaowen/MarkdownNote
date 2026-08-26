@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- M 字母主体 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,30h6l14,20l14,-20h6v48h-7V42l-13,18l-13,-18v36h-7z"/>
+
+    <!-- 底部笔记线条 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.5"
+        android:pathData="M34,86h40v3H34z"/>
+
+</vector>

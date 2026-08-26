@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- 应用私有文件目录 -->
+    <files-path name="internal_files" path="." />
+
+    <!-- 图片目录 -->
+    <files-path name="images" path="images/" />
+
+    <!-- 导出目录 -->
+    <files-path name="exports" path="MarkdownNote/" />
+
+    <!-- 缓存目录 -->
+    <cache-path name="cache" path="." />
+
+    <!-- 外部存储 -->
+    <external-files-path name="external_files" path="." />
+</paths>

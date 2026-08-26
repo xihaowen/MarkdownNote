@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- 密文依赖当前设备的 Android Keystore，不进入云备份。 -->
+    <exclude domain="sharedpref" path="secret_settings.xml" />
+</full-backup-content>

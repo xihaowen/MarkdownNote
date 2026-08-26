@@ -1,0 +1,30 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# 构建产物
+app/build/
+build/
+
+# 签名密钥（敏感文件，不提交）
+*.jks
+*.keystore
+*.apk
+dist/
+.env
+.env.*
+secrets.properties
+
+# 日志
+*.log
+
+# 工具临时文件
+.claude/
+.superpowers/

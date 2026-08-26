@@ -1,0 +1,7 @@
+* text=auto
+
+gradlew text eol=lf
+*.bat text eol=crlf
+
+# 上游压缩产物按字节保留，避免换行归一化改变已记录的 SHA-256。
+app/src/main/assets/mermaid-10.9.6.min.js binary
