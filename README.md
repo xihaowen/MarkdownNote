@@ -35,6 +35,10 @@ Release 签名和 GitHub Release 流程见 [发布指南](docs/RELEASING.md)。
 - [架构说明](docs/ARCHITECTURE.md)
 - [第三方许可](THIRD_PARTY_NOTICES.md)
 
+## 维护者
+
+- [xihaowen](https://github.com/xihaowen)
+
 ## License
 
 Copyright 2026 MarkdownNote contributors.
