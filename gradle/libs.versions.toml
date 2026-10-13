@@ -17,7 +17,7 @@ coroutines = "1.9.0"
 coil = "2.7.0"
 datastore = "1.1.1"
 workmanager = "2.9.1"
-hiltWork = "1.2.0"
+hiltWork = "1.4.0"
 # Markwon
 markwon = "4.6.2"
 okhttp = "4.12.0"
